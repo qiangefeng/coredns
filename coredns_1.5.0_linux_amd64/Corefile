@@ -8,17 +8,4 @@
     log stdout
     errors stdout
     loadbalance
-    proxy . /etc/resolv.conf
-}
-. {
-    etcd {
-        stubzones
-        path /private
-        endpoint http://etcd:2379
-        upstream /etc/resolv.conf
-    }
-    log stdout
-    errors stdout
-    loadbalance
-    proxy . /etc/resolv.conf
 }
