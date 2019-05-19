@@ -1,0 +1,8 @@
+docker run \
+-p 53:53/udp \
+-p 53:53/tcp \
+-p 9153:9153/tcp \
+-d \
+--name coredns \
+--link etcd \
+qiangefeng/coredns
